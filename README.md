@@ -1,4 +1,4 @@
-# ON EBX Reference Data
+# EBX Reference Data
 
 Reference-data management module for ON EBX FastTrack.
 
@@ -9,10 +9,11 @@ Reference-data management module for ON EBX FastTrack.
 
 ## Build
 
-The build requires Java 17 or later and access to the configured EBX Maven repository.
+The build requires Java 17 or later and an EBX server library directory containing `ebx-lib.jar`.
 
 ```bash
+export EBX_LIB_DIR=/path/to/ebx-server/lib
 mvn clean package
 ```
 
-The project can also be included as the `referencedata` module in the ON EBX FastTrack Maven reactor.
+The project can also be included as the `EBX-Reference-Data` module in the ON EBX FastTrack Maven reactor.

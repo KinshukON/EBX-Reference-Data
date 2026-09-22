@@ -5,9 +5,10 @@ import com.orchestranetworks.module.ModuleRegistrationListener;
 import jakarta.servlet.annotation.WebListener;
 
 @WebListener
-public class ModuleRegistration extends ModuleRegistrationListener {
+public final class ModuleRegistration extends ModuleRegistrationListener {
     @Override
-    public void handleServiceRegistration(com.orchestranetworks.module.ModuleServiceRegistrationContext context) {
+    public void handleServiceRegistration(final com.orchestranetworks.module.ModuleServiceRegistrationContext context) {
+        super.handleServiceRegistration(context);
         context.registerUserService(new ReferenceDataHubUserServiceDeclaration());
         context.registerUserService(new FetchNuccDataUserServiceDeclaration());
     }

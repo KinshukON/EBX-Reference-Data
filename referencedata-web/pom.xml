@@ -5,23 +5,22 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.onebx.ebx</groupId>
-        <artifactId>referencedata</artifactId>
+        <artifactId>ebx-reference-data</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>referencedata-web</artifactId>
+    <artifactId>ebx-reference-data-web</artifactId>
     <packaging>war</packaging>
     
     <dependencies>
         <dependency>
             <groupId>com.onebx.ebx</groupId>
-            <artifactId>referencedata-lib</artifactId>
+            <artifactId>ebx-reference-data-lib</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.tibco.ebx.core</groupId>
             <artifactId>ebx-lib</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jakarta.servlet</groupId>
@@ -29,4 +28,8 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>ebx-reference-data</finalName>
+    </build>
 </project>
