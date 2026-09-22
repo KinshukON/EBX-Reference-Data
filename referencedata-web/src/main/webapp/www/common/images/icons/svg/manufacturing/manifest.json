@@ -1,0 +1,883 @@
+{
+  "version": "3.0",
+  "base_manifest": {
+    "previous_manifest": [
+      {
+        "file": "ai_stewardship.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "approved_vendor_list.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "bill_of_materials_routing.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "bin_location.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "bom_component.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "bom_master.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "carrier_master.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "commercial_account.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "corrective_action_capa.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "customer_dashboard.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "customer_master.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "customer_product_cross_reference.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "customers_commercial.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "dashboard.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "distribution_center.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "equipment_asset.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "facility.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "failure_code.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "governance.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "inspection_characteristic.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "inspection_plan.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "inventory_dashboard.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "inventory_item.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "inventory_warehousing.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "logistics_supply_chain.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "lot_batch_master.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "maintenance_dashboard.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "maintenance_location.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "maintenance_plan.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "maintenance_schedule.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "maintenance_service.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "manufacturing.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "manufacturing_analytics.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "material_master.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "materials_products.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "metadata.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "non_conformance.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "packaging_material.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "plant_dashboard.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "plant_master.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "plants_facilities.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "pricing_condition.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "product_classification.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "product_compliance.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "product_dashboard.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "product_master.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "product_variant_sku.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "production_line.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "production_version.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "purchasing_info_record.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "purchasing_organization.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "quality_certificate.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "quality_compliance.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "quality_dashboard.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "reference_data.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "regulatory_compliance.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "route_master.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "routing_master.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "routing_operation.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "sales_organization.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "search.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "service_order_reference.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "shelf_life_expiry_rules.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "ship_to_bill_to.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "shipping_point.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "source_list.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "spare_parts.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "standard_time.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "stewardship_dashboard.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "stock_movement_type.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "storage_location.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "supplier_contract.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "supplier_dashboard.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "supplier_master.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "suppliers_procurement.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "supply_chain_dashboard.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "unit_of_measure.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "warehouse_master.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      },
+      {
+        "file": "work_center.svg",
+        "size": "16x16",
+        "viewBox": "0 0 16 16",
+        "style": "flat vector, EBX navigation menu compatible"
+      }
+    ]
+  },
+  "note": "Manufacturing flat SVG icon pack. Selected icons use user-provided flat PNG artwork embedded inside SVG wrappers so EBX can reference them as SVG files.",
+  "user_provided_image_mappings": [
+    {
+      "svg": "manufacturing.svg",
+      "source_png": "factory.png",
+      "usage": "Manufacturing / Plant / Factory",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "plant_master.svg",
+      "source_png": "factory.png",
+      "usage": "Manufacturing / Plant / Factory",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "plants_facilities.svg",
+      "source_png": "factory.png",
+      "usage": "Manufacturing / Plant / Factory",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "facility.svg",
+      "source_png": "factory.png",
+      "usage": "Manufacturing / Plant / Factory",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "factory.svg",
+      "source_png": "factory.png",
+      "usage": "Standalone source icon: Manufacturing / Plant / Factory",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "production_line.svg",
+      "source_png": "production.png",
+      "usage": "Production Line / Work Center / Routing",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "work_center.svg",
+      "source_png": "production.png",
+      "usage": "Production Line / Work Center / Routing",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "routing_master.svg",
+      "source_png": "production.png",
+      "usage": "Production Line / Work Center / Routing",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "routing_operation.svg",
+      "source_png": "production.png",
+      "usage": "Production Line / Work Center / Routing",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "bill_of_materials_routing.svg",
+      "source_png": "production.png",
+      "usage": "Production Line / Work Center / Routing",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "production.svg",
+      "source_png": "production.png",
+      "usage": "Standalone source icon: Production Line / Work Center / Routing",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "material_master.svg",
+      "source_png": "raw-materials.png",
+      "usage": "Raw Materials / Material Master",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "materials_products.svg",
+      "source_png": "raw-materials.png",
+      "usage": "Raw Materials / Material Master",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "inventory_item.svg",
+      "source_png": "raw-materials.png",
+      "usage": "Raw Materials / Material Master",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "raw_materials.svg",
+      "source_png": "raw-materials.png",
+      "usage": "Standalone source icon: Raw Materials / Material Master",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "commercial_account.svg",
+      "source_png": "corporation.png",
+      "usage": "Commercial Account / Sales Organization",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "sales_organization.svg",
+      "source_png": "corporation.png",
+      "usage": "Commercial Account / Sales Organization",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "customers_commercial.svg",
+      "source_png": "corporation.png",
+      "usage": "Commercial Account / Sales Organization",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "corporation.svg",
+      "source_png": "corporation.png",
+      "usage": "Standalone source icon: Commercial Account / Sales Organization",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "customer_master.svg",
+      "source_png": "customer-2.png",
+      "usage": "Customer Master / Ship-To Bill-To",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "ship_to_bill_to.svg",
+      "source_png": "customer-2.png",
+      "usage": "Customer Master / Ship-To Bill-To",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "customer_2.svg",
+      "source_png": "customer-2.png",
+      "usage": "Standalone source icon: Customer Master / Ship-To Bill-To",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "pricing_condition.svg",
+      "source_png": "customer-3.png",
+      "usage": "Customer Commercial / Pricing / Buying",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "customer_dashboard.svg",
+      "source_png": "customer-3.png",
+      "usage": "Customer Commercial / Pricing / Buying",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "customer_3.svg",
+      "source_png": "customer-3.png",
+      "usage": "Standalone source icon: Customer Commercial / Pricing / Buying",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "customer_product_cross_reference.svg",
+      "source_png": "customer.png",
+      "usage": "Customer Network / Stewardship",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "stewardship_dashboard.svg",
+      "source_png": "customer.png",
+      "usage": "Customer Network / Stewardship",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "customer.svg",
+      "source_png": "customer.png",
+      "usage": "Standalone source icon: Customer Network / Stewardship",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "product_master.svg",
+      "source_png": "products.png",
+      "usage": "Products / SKU / Packaging / Lot Batch",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "product_variant_sku.svg",
+      "source_png": "products.png",
+      "usage": "Products / SKU / Packaging / Lot Batch",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "packaging_material.svg",
+      "source_png": "products.png",
+      "usage": "Products / SKU / Packaging / Lot Batch",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "lot_batch_master.svg",
+      "source_png": "products.png",
+      "usage": "Products / SKU / Packaging / Lot Batch",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "products.svg",
+      "source_png": "products.png",
+      "usage": "Standalone source icon: Products / SKU / Packaging / Lot Batch",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "purchasing_info_record.svg",
+      "source_png": "shopping-cart.png",
+      "usage": "Purchasing / Procurement",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "purchasing_organization.svg",
+      "source_png": "shopping-cart.png",
+      "usage": "Purchasing / Procurement",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "shopping_cart.svg",
+      "source_png": "shopping-cart.png",
+      "usage": "Standalone source icon: Purchasing / Procurement",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "supplier_master.svg",
+      "source_png": "supplier-2.png",
+      "usage": "Supplier Master / Approved Vendor",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "suppliers_procurement.svg",
+      "source_png": "supplier-2.png",
+      "usage": "Supplier Master / Approved Vendor",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "approved_vendor_list.svg",
+      "source_png": "supplier-2.png",
+      "usage": "Supplier Master / Approved Vendor",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "supplier_2.svg",
+      "source_png": "supplier-2.png",
+      "usage": "Standalone source icon: Supplier Master / Approved Vendor",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "warehouse_master.svg",
+      "source_png": "supplier.png",
+      "usage": "Warehouse / Distribution / Storage",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "distribution_center.svg",
+      "source_png": "supplier.png",
+      "usage": "Warehouse / Distribution / Storage",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "storage_location.svg",
+      "source_png": "supplier.png",
+      "usage": "Warehouse / Distribution / Storage",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "bin_location.svg",
+      "source_png": "supplier.png",
+      "usage": "Warehouse / Distribution / Storage",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "supplier.svg",
+      "source_png": "supplier.png",
+      "usage": "Standalone source icon: Warehouse / Distribution / Storage",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "logistics_supply_chain.svg",
+      "source_png": "supply-chain.png",
+      "usage": "Logistics / Supply Chain / Carrier / Route",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "supply_chain_dashboard.svg",
+      "source_png": "supply-chain.png",
+      "usage": "Logistics / Supply Chain / Carrier / Route",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "carrier_master.svg",
+      "source_png": "supply-chain.png",
+      "usage": "Logistics / Supply Chain / Carrier / Route",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "route_master.svg",
+      "source_png": "supply-chain.png",
+      "usage": "Logistics / Supply Chain / Carrier / Route",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "shipping_point.svg",
+      "source_png": "supply-chain.png",
+      "usage": "Logistics / Supply Chain / Carrier / Route",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "supply_chain.svg",
+      "source_png": "supply-chain.png",
+      "usage": "Standalone source icon: Logistics / Supply Chain / Carrier / Route",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "ai_stewardship.svg",
+      "source_png": "team.png",
+      "usage": "AI Stewardship / Governance / Teams",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "governance.svg",
+      "source_png": "team.png",
+      "usage": "AI Stewardship / Governance / Teams",
+      "type": "image_embedded_svg"
+    },
+    {
+      "svg": "team.svg",
+      "source_png": "team.png",
+      "usage": "Standalone source icon: AI Stewardship / Governance / Teams",
+      "type": "image_embedded_svg"
+    }
+  ],
+  "count_svg_files": 92,
+  "added_in_v3": [
+    {
+      "file": "factory_2.svg",
+      "source": "factory-2.png",
+      "size": "16x16",
+      "viewBox": "0 0 512 512",
+      "style": "flat image embedded in SVG wrapper",
+      "usage": "Factory alternate"
+    },
+    {
+      "file": "factory_complex.svg",
+      "source": "factory-2.png",
+      "size": "16x16",
+      "viewBox": "0 0 512 512",
+      "style": "flat image embedded in SVG wrapper",
+      "usage": "Factory complex"
+    },
+    {
+      "file": "manufacturing_industry.svg",
+      "source": "factory-2.png",
+      "size": "16x16",
+      "viewBox": "0 0 512 512",
+      "style": "flat image embedded in SVG wrapper",
+      "usage": "Manufacturing industry"
+    },
+    {
+      "file": "industrial_park.svg",
+      "source": "industrial-park.png",
+      "size": "16x16",
+      "viewBox": "0 0 512 512",
+      "style": "flat image embedded in SVG wrapper",
+      "usage": "Industrial park"
+    },
+    {
+      "file": "production_plant.svg",
+      "source": "industrial-park.png",
+      "size": "16x16",
+      "viewBox": "0 0 512 512",
+      "style": "flat image embedded in SVG wrapper",
+      "usage": "Production plant"
+    },
+    {
+      "file": "manufacturing.svg",
+      "source": "factory-2.png",
+      "size": "16x16",
+      "viewBox": "0 0 512 512",
+      "style": "flat image embedded in SVG wrapper",
+      "usage": "Manufacturing"
+    },
+    {
+      "file": "plants_facilities.svg",
+      "source": "industrial-park.png",
+      "size": "16x16",
+      "viewBox": "0 0 512 512",
+      "style": "flat image embedded in SVG wrapper",
+      "usage": "Plants and facilities"
+    },
+    {
+      "file": "plant_master.svg",
+      "source": "industrial-park.png",
+      "size": "16x16",
+      "viewBox": "0 0 512 512",
+      "style": "flat image embedded in SVG wrapper",
+      "usage": "Plant master"
+    },
+    {
+      "file": "facility.svg",
+      "source": "industrial-park.png",
+      "size": "16x16",
+      "viewBox": "0 0 512 512",
+      "style": "flat image embedded in SVG wrapper",
+      "usage": "Facility"
+    }
+  ]
+}

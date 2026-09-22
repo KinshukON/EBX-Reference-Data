@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+
+  <path d="M16 10h26l8 8v36H16z" fill="#EAF6FF" stroke="#2F80ED" stroke-width="3"/>
+  <path d="M42 10v9h8" fill="none" stroke="#2F80ED" stroke-width="3"/>
+  <text x="21" y="36" font-family="Arial" font-size="18" font-weight="700" fill="#EB5757">TAX</text>
+  <path d="M22 44h20" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+
+</svg>

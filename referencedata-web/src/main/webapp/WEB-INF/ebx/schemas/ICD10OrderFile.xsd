@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX5 DMA instance [reference=ICD10OrderFile] on Tue May 23 18:11:37 CEST 2017 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ReleaseDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="ReferenceData" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Reference Data</osd:label>
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ICD10Type" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/Type </primaryKeys>
+                                            <defaultLabel>${./Type} ${./Description}</defaultLabel>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="Description" type="osd:text" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ICD10CM-Chapter" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/Chapter </primaryKeys>
+                                            <defaultLabel>${./Chapter} ${./ShortDescription}</defaultLabel>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Chapter" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="ShortDescription" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ICD10CM-SubChapter" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/SubChapter </primaryKeys>
+                                            <defaultLabel>${./SubChapter} ${./ShortDescription}</defaultLabel>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SubChapter" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="Chapter" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/ReferenceData/ICD10CM-Chapter</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="ShortDescription" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ICD10PCS-Chapter" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/Chapter </primaryKeys>
+                                            <defaultLabel>${./Chapter} ${./ShortDescription}</defaultLabel>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Chapter" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="ShortDescription" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ICD10PCS-SubChapter" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/SubChapter </primaryKeys>
+                                            <defaultLabel>${./SubChapter} ${./ShortDescription}</defaultLabel>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SubChapter" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="Chapter" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/ReferenceData/ICD10PCS-Chapter</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="ShortDescription" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ICD10TopLevel" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>IDC-10 PCS Top Level Codes</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/IDC10Code </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="IDC10Code" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ICD10Code</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/ICD10PCS</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="shortDescription" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Short Description</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:inheritance>
+                                                        <sourceRecord>/root/ReferenceData/ICD10TopLevel/IDC10Code</sourceRecord>
+                                                        <sourceNode>./ShortDescription</sourceNode>
+                                                    </osd:inheritance>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="ICD10PCSSubChapter" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>SubChapter</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/ReferenceData/ICD10PCS-SubChapter</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ICD10CM" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>ICD10 CM</osd:label>
+                            <osd:description>ICD10 Clinical Modification</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/ICD10Code </primaryKeys>
+                                <defaultLabel>${./ICD10Code} ${./ShortDescription}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ICD10Code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="OrderNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RawCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="UB04Eligible" type="xs:int" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="ShortDescription" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="LongDescription" type="osd:text" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="Parent" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ICD10CM</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ICD10Header" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="Chapter" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ReferenceData/ICD10CM-Chapter</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="SubChapter" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ReferenceData/ICD10CM-SubChapter</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Type" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ReferenceData/ICD10Type</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="childCodes" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Child Codes</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/ICD10CM/Parent</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="tableOfDrugs" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Coding for Drugs/Chemicals</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/CMCodeTables/ICD10TableOfDrugs/rootCode</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ICD10PCS" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>ICD10 PCS</osd:label>
+                            <osd:description>ICD10 Procedure Coding System</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/ICD10Code </primaryKeys>
+                                <defaultLabel>${./ICD10Code} - ${./ShortDescription}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ICD10Code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="OrderNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RawCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="UB04Eligible" type="xs:int" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="ShortDescription" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="LongDescription" type="osd:text" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="Parent" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ICD10PCS</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ICD10Header" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="Chapter" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ReferenceData/ICD10PCS-Chapter</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="SubChapter" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ReferenceData/ICD10PCS-SubChapter</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Type" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ReferenceData/ICD10Type</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="rank" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:computationRule>
+                                            <predicate>(./parentRank + 1)</predicate>
+                                        </osd:computationRule>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="parentRank" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:inheritance>
+                                            <sourceRecord>/root/ICD10PCS/Parent</sourceRecord>
+                                            <sourceNode>./rank</sourceNode>
+                                        </osd:inheritance>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="childCodes" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Child Codes</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/ICD10PCS/Parent</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CMCodeTables" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>ICD10 CM CodeTables</osd:label>
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ICD10TableOfDrugs" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>ICD10 CM Table of Drugs</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/id </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:int" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ID</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:autoIncrement/>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="Substance" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="LinkToNDC" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Link to NDC Substances</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <container>USFDA_NDC</container>
+                                                            <branch>PharmaProducts</branch>
+                                                            <tablePath>/root/SUBSTANCENAME</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="PoisoningIntentional" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Poisoning, Intentional self-harm</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="PoisoningAccidental" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Poisoning, Accidental (unintentional)</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="PoisoningAssault" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Poisoning, Assault</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="PoisoningUndetermined" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Poisoning, Undetermined</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="AdverseEffect" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Adverse effect</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="Underdosing" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Underdosing</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="rootCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Root Code</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:computationRule>
+                                                        <predicate>substring(./PoisoningIntentional,1,5)</predicate>
+                                                    </osd:computationRule>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/ICD10CM</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

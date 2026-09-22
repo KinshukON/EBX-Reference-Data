@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--XML schema generated from EBX(R) DMA instance [reference=NUCC] on Sun May 17 20:33:26 EDT 2026 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="https://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="https://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:validation/>
+            <osd:inheritance>
+                <dataSetInheritance>all</dataSetInheritance>
+            </osd:inheritance>
+            <ebxbnd:binding targetDirectory="../ebx-ps-fasttrack-module/src">
+                <javaPathConstants typeName="com.orchestranetworks.fasttrack.referencedata.path.NUCCPaths">
+                    <nodes root="/root" prefix="" relativeToRoot="false"/>
+                </javaPathConstants>
+            </ebxbnd:binding>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nucc" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>NUCC</osd:label>
+                            <osd:description>National Uniform Claim Committee (NUCC) Health Care Provider Taxonomy Code Set. The NUCC taxonomy is maintained by the National Uniform Claim Committee and utilizes AMA definitions where noted.</osd:description>
+                        </xs:documentation>
+                        <xs:documentation xml:lang="fr-FR">
+                            <osd:label>NUCC</osd:label>
+                            <osd:description>Ensemble de codes de taxonomie des prestataires de soins de santé du National Uniform Claim Committee (NUCC). La taxonomie NUCC est gérée par le National Uniform Claim Committee et utilise les définitions de l'AMA lorsque cela est indiqué.</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/Code </primaryKeys>
+                                <defaultLabel>${./Code} ${./Classification} ${./Specialization}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Code" minOccurs="1" maxOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="80"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Type" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/NuccType</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Classification" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="Specialization" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="Definition" type="osd:text" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="Notes" type="osd:text" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="DisplayName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Display Name</osd:label>
+                                        <osd:description>The primary display name of the taxonomy code.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Section" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Section</osd:label>
+                                        <osd:description>The broad grouping (e.g., Allopathic &amp; Osteopathic Physicians).</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="EffectiveDate" type="xs:date" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Effective Date</osd:label>
+                                        <osd:description>The date the code was added to the standard (parsed from 'new' annotations).</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="DeactivationDate" type="xs:date" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Deactivation Date</osd:label>
+                                        <osd:description>The date the code was deactivated (parsed from 'marked inactive' annotations).</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Version" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Version</osd:label>
+                                        <osd:description>The NUCC version this record corresponds to (e.g., 25.1).</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="classification_code" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/nucc</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="carewise_taxonomycode" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Carewise Taxonomy Code</osd:label>
+                                        <osd:description>Alternate taxonomy code used by CareWise.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="20"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Specialties" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/nucc/classification_code</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <displayMode>tab</displayMode>
+                                            <tabularView>
+                                                <column>/Code</column>
+                                                <column>/Classification</column>
+                                                <column>/Specialization</column>
+                                                <column>/Definition</column>
+                                                <column>/Notes</column>
+                                                <initialQueryEnabled>true</initialQueryEnabled>
+                                                <sort>
+                                                    <nodePath>/Code</nodePath>
+                                                    <isAscending>true</isAscending>
+                                                </sort>
+                                                <sort>
+                                                    <nodePath>/Classification</nodePath>
+                                                    <isAscending>true</isAscending>
+                                                </sort>
+                                                <sort>
+                                                    <nodePath>/Specialization</nodePath>
+                                                    <isAscending>true</isAscending>
+                                                </sort>
+                                            </tabularView>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NuccType" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>NUCC types</osd:label>
+                        </xs:documentation>
+                        <xs:documentation xml:lang="fr-FR">
+                            <osd:label>Types NUCC</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/Type </primaryKeys>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="parent_Type" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/NuccType</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="associated_types" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Associated Types</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/NuccType/parent_Type</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="associated_codes" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Associated Codes</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/nucc/Type</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <displayMode>tab</displayMode>
+                                            <tabularView>
+                                                <column>/Code</column>
+                                                <column>/Classification</column>
+                                                <column>/Specialization</column>
+                                                <column>/Definition</column>
+                                                <column>/Notes</column>
+                                                <initialQueryEnabled>true</initialQueryEnabled>
+                                                <sort>
+                                                    <nodePath>/Code</nodePath>
+                                                    <isAscending>true</isAscending>
+                                                </sort>
+                                                <sort>
+                                                    <nodePath>/Classification</nodePath>
+                                                    <isAscending>true</isAscending>
+                                                </sort>
+                                                <sort>
+                                                    <nodePath>/Specialization</nodePath>
+                                                    <isAscending>true</isAscending>
+                                                </sort>
+                                            </tabularView>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Configuration" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Configuration</osd:label>
+                            <osd:description>Settings for the NUCC taxonomy integration.</osd:description>
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="sourceEndpointUrl" type="xs:anyURI" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Source Endpoint URL</osd:label>
+                                        <osd:description>The endpoint address to fetch the NUCC data from.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

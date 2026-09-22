@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--XML schema generated from EBX(R) DMA instance [reference=DEA] on Sun May 17 19:19:32 EDT 2026 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="https://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="https://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:validation/>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ControlledSubstanceSchedule" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Controlled Substance Schedule</osd:label>
+                            <osd:description>Reference list of federal controlled-substance schedule categories used to classify DEA-authorized controlled-substance activities.</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/ScheduleCode </primaryKeys>
+                                <defaultLabel>${./ScheduleCode} - ${./ScheduleLabel}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ScheduleCode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="ScheduleLabel" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="Description" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="AbusePotentialLevel" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="MedicalUseIndicator" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="FederalReference" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="SortOrder" type="xs:int" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="EffectiveStartDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="EffectiveEndDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DEARegistrationStatus" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>DEA Registration Status</osd:label>
+                            <osd:description>Reference list of lifecycle statuses used to evaluate whether a DEA registration is active, expired, suspended, revoked, or otherwise unusable.</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/StatusCode </primaryKeys>
+                                <defaultLabel>${./StatusLabel}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="StatusCode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="StatusLabel" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="Description" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="IsAuthorizedToPrescribe" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="SortOrder" type="xs:int" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DEABusinessActivityCode" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>DEA Business Activity Code</osd:label>
+                            <osd:description>Reference list of DEA business activity categories used to classify registrants.</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/BusinessActivityCode </primaryKeys>
+                                <defaultLabel>${./BusinessActivityCode} - ${./BusinessActivityLabel}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="BusinessActivityCode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="BusinessActivityLabel" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="Description" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="RegistrantEntityType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="CanBeHCP" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="CanBeHCO" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="SortOrder" type="xs:int" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ProviderControlledSubstanceRegistration" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Provider Controlled Substance Registration</osd:label>
+                            <osd:description>Master table of DEA controlled-substance registrations associated with healthcare providers, organizations, facilities, or other regulated entities.</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/RegistrationId </primaryKeys>
+                                <defaultLabel>${./RegistrantName} (DEA: ${./DEARegistrationNumber})</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="RegistrationId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="DEARegistrationNumber" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="DEARegistrationNumberHash" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RegistrantName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="RegistrantType" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="ProviderHCP" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <container>NPPES</container>
+                                                <branch>NPPES</branch>
+                                                <tablePath>/root/ProviderCore</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="OrganizationHCO" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="BusinessActivityCode" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/DEABusinessActivityCode</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="RegistrationStatus" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/DEARegistrationStatus</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="RegisteredAddressLine1" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RegisteredAddressLine2" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RegisteredCity" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RegisteredStateCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <container>Geographies</container>
+                                                <branch>Geographies</branch>
+                                                <tablePath>/root/Subdivision</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="RegisteredPostalCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RegisteredCountryCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="IssueDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="ExpirationDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="LastVerifiedDate" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="VerificationSource" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="VerificationStatus" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="SourceSystem" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="SourceRecordId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="Notes" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DEAAuthorizedSchedule" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>DEA Authorized Schedule</osd:label>
+                            <osd:description>Bridge table identifying which controlled-substance schedules are authorized for a specific DEA registration.</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/RegistrationId /ScheduleCode </primaryKeys>
+                                <defaultLabel>${./RegistrationId} - ${./ScheduleCode}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="RegistrationId" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ProviderControlledSubstanceRegistration</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ScheduleCode" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ControlledSubstanceSchedule</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="AuthorizedIndicator" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="RestrictionText" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="EffectiveStartDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="EffectiveEndDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DEAValidationEvidencePSV" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>DEA Validation Evidence (PSV)</osd:label>
+                            <osd:description>Evidence table recording primary source verification results, source details, reviewer decisions, and audit information for DEA registration validation.</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/ValidationEvidenceId </primaryKeys>
+                                <defaultLabel>${./ValidationEvidenceId} - ${./RegistrationId}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ValidationEvidenceId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="RegistrationId" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ProviderControlledSubstanceRegistration</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="VerificationDate" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="VerificationMethod" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="VerificationSource" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="VerifiedBy" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="VerificationResult" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="MatchedRegistrantName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="MatchedAddress" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="MatchedBusinessActivityCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="MatchedSchedules" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="MatchedExpirationDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="EvidenceDocumentId" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="EvidenceUri" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="ConfidenceScore" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="ReviewerDecision" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="ReviewerNotes" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

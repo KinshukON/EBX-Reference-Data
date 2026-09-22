@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--XML schema generated from EBX(R) DMA instance [reference=USPS] on Sun May 17 21:12:59 EDT 2026 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="https://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="https://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:validation/>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="StateAbbreviation" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>State Abbreviations</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/StateCode </primaryKeys>
+                                <defaultLabel>${./StateCode} - ${./StateName}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="StateCode" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <container>Geographies</container>
+                                                <branch>Geographies</branch>
+                                                <tablePath>/root/Subdivision</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="StateName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="CountryCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="StateType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="IsActive" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="SortOrder" type="xs:int" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="StreetSuffix" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Street Suffixes (CASS)</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/SuffixVariant </primaryKeys>
+                                <defaultLabel>${./SuffixVariant} -> ${./StandardSuffixAbbreviation}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SuffixVariant" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="PrimarySuffixName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="StandardSuffixAbbreviation" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="SourceSection" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Directional" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Directionals (CASS)</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/DirectionalName </primaryKeys>
+                                <defaultLabel>${./DirectionalName} (${./DirectionalAbbreviation})</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="DirectionalName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="DirectionalAbbreviation" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="DirectionalType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="SourceSection" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SecondaryUnit" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Secondary Unit Designators (CASS)</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/DesignatorCode </primaryKeys>
+                                <defaultLabel>${./DesignatorCode} - ${./DesignatorName}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="DesignatorCode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="DesignatorName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="RequiresSecondaryNumber" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="SourceSection" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AddressStandardizationRule" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Address Standardization Rules</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/RuleCode </primaryKeys>
+                                <defaultLabel>${./RuleCode} - ${./RuleName}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="RuleCode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="RuleName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="RuleCategory" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RuleDescription" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="SourcePublication" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="SourceSection" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="ImplementationType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ValidationResultCode" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Address Validation Result Codes</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/ResultCode </primaryKeys>
+                                <defaultLabel>${./ResultCode} - ${./ResultLabel}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ResultCode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="ResultLabel" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="Severity" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="IsDeliverable" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RequiresStewardReview" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CASSCertificationMetadata" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>CASS Certification Metadata</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/CassProfileId </primaryKeys>
+                                <defaultLabel>${./CassProfileId} - ${./VendorName} ${./ProductName}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="CassProfileId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="VendorName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="ProductName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="CassCycle" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="CertificationNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="CertificationEffectiveDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="CertificationExpirationDate" type="xs:date" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="UsesDPV" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="UsesLACSLink" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="UsesSuiteLink" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CASSProcessingResult" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>CASS Processing Results</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/CassProcessingResultId </primaryKeys>
+                                <defaultLabel>${./SourceAddressId} - ${./ResultCode}</defaultLabel>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="CassProcessingResultId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="SourceAddressId" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="CassProfileId" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/CASSCertificationMetadata</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="OriginalAddressLine1" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="OriginalAddressLine2" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="OriginalCity" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="OriginalStateCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="OriginalPostalCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="StandardizedAddressLine1" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="StandardizedAddressLine2" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="StandardizedCity" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="StandardizedStateCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="StandardizedZIP5" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="StandardizedZIP4" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="ResultCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/ValidationResultCode</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="ValidationDateTime" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="VendorRawResultCode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RequiresStewardReview" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+                            <xs:element name="RecordStatus" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

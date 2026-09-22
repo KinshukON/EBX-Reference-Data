@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--XML schema generated from EBX(R) DMA instance [reference=Currency] on Tue May 05 13:41:30 EDT 2026 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="https://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="https://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:validation/>
+            <osd:inheritance>
+                <dataSetInheritance>all</dataSetInheritance>
+            </osd:inheritance>
+            <ebxbnd:binding targetDirectory="../ebx-ps-fasttrack-lib/src/main/java">
+                <javaPathConstants typeName="com.tibco.ebx.ps.fasttrack.referencedata.path.CurrencyPaths">
+                    <nodes root="/root" prefix="" relativeToRoot="false"/>
+                </javaPathConstants>
+            </ebxbnd:binding>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Currency" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Currencies (ISO-4217)</osd:label>
+                        </xs:documentation>
+                        <xs:documentation xml:lang="fr-FR">
+                            <osd:label>Devises (ISO-4217)</osd:label>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/AlphaCode </primaryKeys>
+                                <defaultView>
+                                    <toolbars>
+                                        <tabularViewTop>TableToolbar</tabularViewTop>
+                                        <recordTop>Edit</recordTop>
+                                    </toolbars>
+                                </defaultView>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="AlphaCode" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Alpha code</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Code alphanumérique</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:length value="3"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="NumericCode" type="xs:string" minOccurs="1" maxOccurs="1" osd:trim="onUserInput">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Numeric code</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Code numérique</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Symbol" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Symbol</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Symbole</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Label" type="xs:string" minOccurs="0" maxOccurs="1" osd:trim="onUserInput">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Label</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Libellé</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Decimal" type="xs:int" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Decimal</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Décimale</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Active" type="xs:boolean" minOccurs="1" maxOccurs="1" default="true">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Active</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Active</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Countries" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Countries</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Pays</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <linkTable>
+                                                <table>/root/TechnicalData/Currency_Country</table>
+                                                <fieldToSource>/root/TechnicalData/Currency_Country/Currency</fieldToSource>
+                                                <fieldToTarget>/root/TechnicalData/Currency_Country/Country</fieldToTarget>
+                                            </linkTable>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:unique name="UniqueOn_root_CurrencyDB368E53-13FD-4636-B39B-AD55DC499CDF">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <osd:validation>
+                                    <caseSensitivity>sensitive</caseSensitivity>
+                                </osd:validation>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:selector xpath="."/>
+                        <xs:field xpath="NumericCode"/>
+                    </xs:unique>
+                </xs:element>
+                <xs:element name="TechnicalData" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Technical data</osd:label>
+                        </xs:documentation>
+                        <xs:documentation xml:lang="fr-FR">
+                            <osd:label>Données techniques</osd:label>
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Currency_Country" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Currency by country</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Devise par pays</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/Currency /Country </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Currency" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Currency</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Devise</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Currency</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="Country" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Country</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Pays</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <container>Geographies</container>
+                                                            <branch>Geographies</branch>
+                                                            <tablePath>/root/Country</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

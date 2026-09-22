@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML schema generated from EBX(R) DMA instance [reference=Geographies] on Mon Feb 22 13:26:27 AEDT 2021 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="http://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="http://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:validation>
+                <validationMessageThreshold>1000</validationMessageThreshold>
+            </osd:validation>
+            <osd:inheritance>
+                <dataSetInheritance>all</dataSetInheritance>
+            </osd:inheritance>
+            <ebxbnd:binding targetDirectory="../ebx-ps-fasttrack-lib/src/main/java">
+                <javaPathConstants typeName="com.tibco.ebx.ps.fasttrack.referencedata.path.GeographyPaths">
+                    <nodes root="/root" prefix="" relativeToRoot="false"/>
+                </javaPathConstants>
+            </ebxbnd:binding>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="BusinessRegion" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Business Regions</osd:label>
+                            <osd:description>Define our organisation business regions</osd:description>
+                        </xs:documentation>
+                        <xs:documentation xml:lang="fr-FR">
+                            <osd:label>Region d'affaires</osd:label>
+                            <osd:description>Définit les régions d'affaires de l'entreprise</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/Code </primaryKeys>
+                                <defaultLabel>${./Name} (${./Code})</defaultLabel>
+                                <defaultView>
+                                    <defaultViewForGroups>expanded</defaultViewForGroups>
+                                </defaultView>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Code" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Code</osd:label>
+                                        <osd:description>Internal codification for our business regions</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Code</osd:label>
+                                        <osd:description>Codification interne de nos régions d'affaires</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Name</osd:label>
+                                        <osd:description>Name of the business region</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Nom</osd:label>
+                                        <osd:description>Nom de la région d'affaires</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Countries" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Countries</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Countries</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <linkTable>
+                                                <table>/root/TechnicalData/Country_Region</table>
+                                                <fieldToSource>/root/TechnicalData/Country_Region/Region</fieldToSource>
+                                                <fieldToTarget>/root/TechnicalData/Country_Region/Country</fieldToTarget>
+                                            </linkTable>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <displayMode>inline</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Country" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Countries (ISO 3166-1)</osd:label>
+                            <osd:description>ISO 3166-1 is part of the ISO 3166 standard published by the International Organization for Standardization (ISO), and defines codes for the names of countries, dependent territories, and special areas of geographical interest. The official name of the standard is Codes for the representation of names of countries and their subdivisions – Part 1: Country codes. </osd:description>
+                        </xs:documentation>
+                        <xs:documentation xml:lang="fr-FR">
+                            <osd:label>Pays (ISO 3166-1)</osd:label>
+                            <osd:description>ISO 3166-1 est une des parties de la norme ISO 3166. Publiée pour la première fois en 1974 par l’ISO, elle attribue 3 codes pour les pays du monde :&#13;
+&#13;
+ISO 3166-1 alpha-2 : codes à deux lettres pour de nombreuses applications, notamment les domaines de premier niveau pour chaque pays, ou les codes des unités monétaires ISO 4217.&#13;
+ISO 3166-1 alpha-3 : codes à trois lettres.&#13;
+ISO 3166-1 numeric : codes à trois chiffres, identiques à ceux définis par la Division statistique des Nations unies, dans la spécification UN M.49.</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/Alpha2Code </primaryKeys>
+                                <defaultLabel>${./Name}</defaultLabel>
+                                <defaultLabel xml:lang="fr-FR">${./NameFR}</defaultLabel>
+                                <defaultView>
+                                    <defaultViewForGroups>expanded</defaultViewForGroups>
+                                </defaultView>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="NumericCode" type="xs:int" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Numeric code</osd:label>
+                                        <osd:description>The ISO 3166-1 code as an integer</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Code numérique</osd:label>
+                                        <osd:description>Le code ISO 3166-1 comme entier</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Alpha2Code" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Alpha-2 Code</osd:label>
+                                        <osd:description>Two-letter country codes which are the most widely used of the three, and used most prominently for the Internet's country code top-level domains (with a few exceptions).</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Code Alpha-2</osd:label>
+                                        <osd:description>Codes à deux lettres pour de nombreuses applications, notamment les domaines de premier niveau pour chaque pays, ou les codes des unités monétaires ISO 4217.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:length value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Alpha3Code" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Alpha-3 code</osd:label>
+                                        <osd:description>Three-letter country codes which allow a better visual association between the codes and the country names than the alpha-2 codes.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Code Alpha-3</osd:label>
+                                        <osd:description>Codes à trois lettres.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:length value="3"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Name" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Name</osd:label>
+                                        <osd:description>Name of the country in English</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Nom EN</osd:label>
+                                        <osd:description>Nom du pays en Anglais</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="NameFR" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Name FR</osd:label>
+                                        <osd:description>Name of the country in French</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Nom</osd:label>
+                                        <osd:description>Nom du pays en Français</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="BusinessRegions" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Regions</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Regions</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <linkTable>
+                                                <table>/root/TechnicalData/Country_Region</table>
+                                                <fieldToSource>/root/TechnicalData/Country_Region/Country</fieldToSource>
+                                                <fieldToTarget>/root/TechnicalData/Country_Region/Region</fieldToTarget>
+                                            </linkTable>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <displayMode>inline</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="OtherCodes" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Other codes</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Autres codes</osd:label>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ITU" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>ITU</osd:label>
+                                                    <osd:description>Codes assigned by the International Telecommunications Union</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>ITU</osd:label>
+                                                    <osd:description>Codes des l'union internationale des télécommunications</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="MARC" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>MARC</osd:label>
+                                                    <osd:description>Machine-Readable Cataloging codes from the Library of Congress</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>MARC</osd:label>
+                                                    <osd:description>Code de la librairie du Congrès</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="WMO" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>WMO</osd:label>
+                                                    <osd:description>Country abbreviations by the World Meteorological Organization</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>WMO</osd:label>
+                                                    <osd:description>Code de l'organisation mondiale météorologique</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="DS" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>DS</osd:label>
+                                                    <osd:description>Distinguishing signs of vehicles in international traffic</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>DS</osd:label>
+                                                    <osd:description>Signes distinctifs des véhicules pour le trafic international</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="Dial" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Dial</osd:label>
+                                                    <osd:description>Country code from ITU-T recommendation E.164, sometimes followed by area code</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Dial</osd:label>
+                                                    <osd:description>Code pays de ITU-T, recommandation E.164, parfois suivi du code région</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="FIFA" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>FIFA</osd:label>
+                                                    <osd:description>Codes assigned by the Fédération Internationale de Football Association</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>FIFA</osd:label>
+                                                    <osd:description>Codes assignés par la fédération internationale de football </osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="FIPS" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>FIPS</osd:label>
+                                                    <osd:description>Codes from the U.S. standard FIPS PUB 10-4</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>FIPS</osd:label>
+                                                    <osd:description>Codes du standard américain FIPS PUB 10-4</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="GAUL" type="xs:int" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GAUL</osd:label>
+                                                    <osd:description>Global Administrative Unit Layers from the Food and Agriculture Organization</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>GAUL</osd:label>
+                                                    <osd:description>Unités administratives de l'organisation de l'alimentation et de l'agriculture</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="IOC" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>IOC</osd:label>
+                                                    <osd:description>Codes assigned by the International Olympics Committee</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>IOC</osd:label>
+                                                    <osd:description>Codes assignés par le comité international olympique</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Subdivisions" type="xs:string" minOccurs="0" maxOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Subdivisions</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Subdivisions</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:association>
+                                            <tableRefInverse>
+                                                <fieldToSource>/root/Subdivision/Country</fieldToSource>
+                                            </tableRefInverse>
+                                        </osd:association>
+                                        <osd:defaultView>
+                                            <displayMode>tab</displayMode>
+                                        </osd:defaultView>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:unique name="UniqueOn_root_Country37AB836A-A066-4C2B-96BE-9DA41B713423">
+                        <xs:selector xpath="."/>
+                        <xs:field xpath="NumericCode"/>
+                    </xs:unique>
+                    <xs:unique name="UniqueOn_root_CountryB5F55358-F00D-4443-9A08-65D086CB003F">
+                        <xs:selector xpath="."/>
+                        <xs:field xpath="Alpha3Code"/>
+                    </xs:unique>
+                </xs:element>
+                <xs:element name="Subdivision" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Subdivisions (ISO 3166-2)</osd:label>
+                            <osd:description>ISO 3166-2 is part of the ISO 3166 standard published by the International Organization for Standardization (ISO), and defines codes for identifying the principal subdivisions (e.g., provinces or states) of all countries coded in ISO 3166-1. The official name of the standard is Codes for the representation of names of countries and their subdivisions – Part 2: Country subdivision code.</osd:description>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <osd:table>
+                                <primaryKeys>/Code </primaryKeys>
+                                <defaultLabel>${./Name} (${./Code})</defaultLabel>
+                                <defaultView>
+                                    <defaultViewForGroups>expanded</defaultViewForGroups>
+                                </defaultView>
+                            </osd:table>
+                        </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Code" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Code</osd:label>
+                                        <osd:description>2 Character Code associated with the State/Province/Region of the applicable Country as defined by the ISO 3166-2 Standard. Note: the "X~" notation in the suffix of the ISO Code denotes that that the ISO 3166-2 Standard currently does not provide a State/Subdivision Code.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Code</osd:label>
+                                        <osd:description>Code de la subdivision administrative (état/province/région) du pays telle que définie par le standard ISO 3166-2</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="6"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Name" type="xs:string" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Name</osd:label>
+                                        <osd:description>Name associated with the State/Province/Region of the applicable Country as defined by the ISO 3166-2 Standard.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Nom</osd:label>
+                                        <osd:description>Nom de la subdivision administrative (état/province/région) du pays telle que définie par le standard ISO 3166-2.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="Country" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Country</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Pays</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:otherFacets>
+                                            <osd:tableRef>
+                                                <tablePath>/root/Country</tablePath>
+                                            </osd:tableRef>
+                                        </osd:otherFacets>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TechnicalData" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>Technical data</osd:label>
+                        </xs:documentation>
+                        <xs:documentation xml:lang="fr-FR">
+                            <osd:label>Données techniques</osd:label>
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Country_Region" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Country by regions</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/Region /Country </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Region" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Region</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Region</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/BusinessRegion</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="Country" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Country</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/Country</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

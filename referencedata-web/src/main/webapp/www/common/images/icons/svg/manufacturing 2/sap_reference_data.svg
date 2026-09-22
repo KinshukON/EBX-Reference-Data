@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+
+  <path d="M12 16h40v34H12z" fill="#EAF6FF" stroke="#2F80ED" stroke-width="3"/>
+  <path d="M18 24h28M18 32h28M18 40h18" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="48" cy="42" r="8" fill="#F2C94C" stroke="#F2994A" stroke-width="3"/>
+  <text x="16" y="17" font-family="Arial" font-size="8" font-weight="700" fill="#2F80ED">SAP</text>
+
+</svg>

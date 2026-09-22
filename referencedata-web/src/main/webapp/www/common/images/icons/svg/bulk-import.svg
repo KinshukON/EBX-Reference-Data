@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Bulk import</title>
+  <desc id="desc">Multiple data files importing into a database</desc>
+
+  <!-- Stacked source files -->
+  <rect x="7" y="7" width="25" height="31" rx="4" fill="#A9D1FF"/>
+  <rect x="12" y="11" width="25" height="31" rx="4" fill="#4FA3F7"/>
+  <rect x="17" y="15" width="25" height="31" rx="4" fill="#1F4B8F"/>
+
+  <!-- Table rows on the front file -->
+  <rect x="22" y="21" width="15" height="4" rx="2" fill="#FFFFFF"/>
+  <rect x="22" y="29" width="15" height="4" rx="2" fill="#FFFFFF" opacity="0.9"/>
+  <rect x="22" y="37" width="10" height="4" rx="2" fill="#FFFFFF" opacity="0.8"/>
+
+  <!-- Import arrow -->
+  <path d="M48 8a4 4 0 0 1 4 4v18h5.2a2 2 0 0 1 1.45 3.38L51.45 41a2 2 0 0 1-2.9 0l-7.2-7.62A2 2 0 0 1 42.8 30H48V12a4 4 0 0 1 4-4Z" fill="#7BCB16"/>
+
+  <!-- Target database -->
+  <ellipse cx="40" cy="48" rx="17" ry="6" fill="#8EC3FF"/>
+  <path d="M23 48v7c0 3.31 7.61 6 17 6s17-2.69 17-6v-7c0 3.31-7.61 6-17 6s-17-2.69-17-6Z" fill="#4FA3F7"/>
+  <ellipse cx="40" cy="48" rx="17" ry="6" fill="#BFDFFF"/>
+  <ellipse cx="40" cy="48" rx="11" ry="3" fill="#FFFFFF" opacity="0.55"/>
+</svg>

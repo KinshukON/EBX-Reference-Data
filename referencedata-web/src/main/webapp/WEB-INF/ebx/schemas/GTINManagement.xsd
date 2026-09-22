@@ -1,0 +1,1685 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--XML schema generated from EBX(R) DMA instance [reference=GTINManagement] on Sat May 23 09:41:52 EDT 2026 by user [admin].-->
+<xs:schema xmlns:osd="urn:ebx-schemas:common_1.0" xmlns:fmt="urn:ebx-schemas:format_1.0" xmlns:ebxbnd="urn:ebx-schemas:binding_1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ebxs="urn:ebx-schemas:session_1.0">
+    <xs:import namespace="urn:ebx-schemas:common_1.0" schemaLocation="https://schema.orchestranetworks.com/common_1.0.xsd"/>
+    <xs:import namespace="urn:ebx-schemas:session_1.0" schemaLocation="https://schema.orchestranetworks.com/session_1.0.xsd"/>
+    <xs:annotation>
+        <xs:appinfo>
+            <osd:validation>
+                <validationMessageThreshold>1000</validationMessageThreshold>
+            </osd:validation>
+            <osd:inheritance>
+                <dataSetInheritance>all</dataSetInheritance>
+            </osd:inheritance>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name="root" osd:access="--">
+        <xs:annotation>
+            <xs:documentation xml:lang="en-US">
+                <osd:label>Root</osd:label>
+                <osd:description>Root description.</osd:description>
+            </xs:documentation>
+            <xs:documentation xml:lang="fr-FR">
+                <osd:label>Root</osd:label>
+                <osd:description>Description pour Root.</osd:description>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="GTINManagementDataModel" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation xml:lang="en-US">
+                            <osd:label>GTIN Management Data Model</osd:label>
+                            <osd:description>GTIN Management Data Model description.</osd:description>
+                        </xs:documentation>
+                        <xs:documentation xml:lang="fr-FR">
+                            <osd:label>GTIN Management Data Model</osd:label>
+                            <osd:description>Description pour GTIN Management Data Model.</osd:description>
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="GTINMaster" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GTIN Master</osd:label>
+                                        <osd:description>GTIN Master description.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>GTIN Master</osd:label>
+                                        <osd:description>Description pour GTIN Master.</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/gtin </primaryKeys>
+                                            <defaultLabel>${./gtin} - ${./productName}</defaultLabel>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="gtin" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN</osd:label>
+                                                    <osd:description>GTIN description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code GTIN</osd:label>
+                                                    <osd:description>Description pour Code GTIN.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="14"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="gtinType" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN Type</osd:label>
+                                                    <osd:description>GTIN Type description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Type de GTIN</osd:label>
+                                                    <osd:description>Description pour Type de GTIN.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/Reference/GTINType</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="brandName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Brand Name</osd:label>
+                                                    <osd:description>Brand Name description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Nom de la marque</osd:label>
+                                                    <osd:description>Description pour Nom de la marque.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="modelNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Model Number</osd:label>
+                                                    <osd:description>Model Number description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Numéro de modèle</osd:label>
+                                                    <osd:description>Description pour Numéro de modèle.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="productName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Product Name</osd:label>
+                                                    <osd:description>Product Name description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Nom du produit</osd:label>
+                                                    <osd:description>Description pour Nom du produit.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="productDescription" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Product Description</osd:label>
+                                                    <osd:description>Product Description description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Description du produit</osd:label>
+                                                    <osd:description>Description pour Description du produit.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="gs1CountryCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GS1 Country Code</osd:label>
+                                                    <osd:description>GS1 Country Code description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code pays GS1</osd:label>
+                                                    <osd:description>Description pour Code pays GS1.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <container>Geographies</container>
+                                                            <branch>Geographies</branch>
+                                                            <tablePath>/root/Country</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="primaryCategory" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Primary Category</osd:label>
+                                                    <osd:description>Primary Category description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Catégorie principale</osd:label>
+                                                    <osd:description>Description pour Catégorie principale.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="productUrl" type="xs:anyURI" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Product URL</osd:label>
+                                                    <osd:description>Product URL description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>URL du produit</osd:label>
+                                                    <osd:description>Description pour URL du produit.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="activeFlag" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Active Flag</osd:label>
+                                                    <osd:description>Active Flag description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Indicateur actif</osd:label>
+                                                    <osd:description>Description pour Indicateur actif.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="lastUpdated" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Last Updated</osd:label>
+                                                    <osd:description>Last Updated description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Dernière mise à jour</osd:label>
+                                                    <osd:description>Description pour Dernière mise à jour.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="sourceSystem" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Source System</osd:label>
+                                                    <osd:description>Source System description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Système source</osd:label>
+                                                    <osd:description>Description pour Système source.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="sourceRecordId" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Source Record ID</osd:label>
+                                                    <osd:description>Source Record ID description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>ID d'enregistrement source</osd:label>
+                                                    <osd:description>Description pour ID d'enregistrement source.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="dataQualityScore" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Data Quality Score</osd:label>
+                                                    <osd:description>Data Quality Score description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Score de qualité des données</osd:label>
+                                                    <osd:description>Description pour Score de qualité des données.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="createdDate" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Created Date</osd:label>
+                                                    <osd:description>Created Date description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Date de création</osd:label>
+                                                    <osd:description>Description pour Date de création.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="updatedDate" type="xs:dateTime" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Updated Date</osd:label>
+                                                    <osd:description>Updated Date description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Date de mise à jour</osd:label>
+                                                    <osd:description>Description pour Date de mise à jour.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="CommercialDetails" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Commercial Details</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Détails commerciaux</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/GTINManagementDataModel/GTINCommercial/gtin</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="Categories" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Categories</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Catégories</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/GTINManagementDataModel/GTINCategory/gtin</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="ClassificationMappings" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Classification Mappings</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Mappages de classification</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/GTINManagementDataModel/GTINClassificationMapping/gtin</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="DigitalAssets" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Digital Assets</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Actifs numériques</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/GTINManagementDataModel/GTINDigitalAssets/gtin</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LifecycleEvents" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Lifecycle Events</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Événements du cycle de vie</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/GTINManagementDataModel/GTINLifecycle/gtin</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="ClinicalAttributes" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Clinical Attributes</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Attributs cliniques</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/GTINManagementDataModel/GTINClinicalAttributes/gtin</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="Manufacturer" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Manufacturer Details</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Détails du fabricant</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/GTINManagementDataModel/GTINManufacturer/gtin</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="Packaging" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Packaging Hierarchy</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Hiérarchie d'emballage</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/GTINManagementDataModel/GTINPackaging/gtin</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="Regulatory" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Regulatory Data</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Données réglementaires</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/GTINManagementDataModel/GTINRegulatory/gtin</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="PhysicalSpecs" type="xs:string" minOccurs="0" maxOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Physical Specs</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Spécifications physiques</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:association>
+                                                        <tableRefInverse>
+                                                            <fieldToSource>/root/GTINManagementDataModel/GTINPhysicalSpecs/gtin</fieldToSource>
+                                                        </tableRefInverse>
+                                                    </osd:association>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GTINCommercial" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GTIN Commercial</osd:label>
+                                        <osd:description>GTIN Commercial description.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>GTIN Commercial</osd:label>
+                                        <osd:description>Description pour GTIN Commercial.</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/commercialId </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="commercialId" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Commercial ID</osd:label>
+                                                    <osd:description>Commercial ID description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>ID commercial</osd:label>
+                                                    <osd:description>Description pour ID commercial.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="gtin" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN</osd:label>
+                                                    <osd:description>GTIN description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code GTIN</osd:label>
+                                                    <osd:description>Description pour Code GTIN.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/GTINMaster</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="currencyCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Currency Code</osd:label>
+                                                    <osd:description>Currency Code description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code devise</osd:label>
+                                                    <osd:description>Description pour Code devise.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/Reference/Currency</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="minimumPrice" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Minimum Price</osd:label>
+                                                    <osd:description>Minimum Price description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Prix minimum</osd:label>
+                                                    <osd:description>Description pour Prix minimum.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="carbonOffsetAmount" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Carbon Offset Amount</osd:label>
+                                                    <osd:description>Carbon Offset Amount description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Montant de compensation carbone</osd:label>
+                                                    <osd:description>Description pour Montant de compensation carbone.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="offersCount" type="xs:int" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Offers Count</osd:label>
+                                                    <osd:description>Offers Count description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Nombre d'offres</osd:label>
+                                                    <osd:description>Description pour Nombre d'offres.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="marketCountry" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Market Country</osd:label>
+                                                    <osd:description>Market Country description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Pays du marché</osd:label>
+                                                    <osd:description>Description pour Pays du marché.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <container>Geographies</container>
+                                                            <branch>Geographies</branch>
+                                                            <tablePath>/root/Country</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="effectiveDate" type="xs:date" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Effective Date</osd:label>
+                                                    <osd:description>Effective Date description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Date d'effet</osd:label>
+                                                    <osd:description>Description pour Date d'effet.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GTINCategory" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GTIN Category</osd:label>
+                                        <osd:description>GTIN Category description.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>GTIN Category</osd:label>
+                                        <osd:description>Description pour GTIN Category.</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/categoryId </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="categoryId" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Category ID</osd:label>
+                                                    <osd:description>Category ID description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>ID de catégorie</osd:label>
+                                                    <osd:description>Description pour ID de catégorie.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="gtin" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN</osd:label>
+                                                    <osd:description>GTIN description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code GTIN</osd:label>
+                                                    <osd:description>Description pour Code GTIN.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/GTINMaster</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="categoryName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Category Name</osd:label>
+                                                    <osd:description>Category Name description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Nom de catégorie</osd:label>
+                                                    <osd:description>Description pour Nom de catégorie.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="categoryPath" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Category Path</osd:label>
+                                                    <osd:description>Category Path description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Chemin de la catégorie</osd:label>
+                                                    <osd:description>Description pour Chemin de la catégorie.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="sourceCategory" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Source Category</osd:label>
+                                                    <osd:description>Source Category description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Catégorie source</osd:label>
+                                                    <osd:description>Description pour Catégorie source.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GTINClassificationMapping" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GTIN Classification Mapping</osd:label>
+                                        <osd:description>GTIN Classification Mapping description.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>GTIN Classification Mapping</osd:label>
+                                        <osd:description>Description pour GTIN Classification Mapping.</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/mappingId </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="mappingId" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Mapping ID</osd:label>
+                                                    <osd:description>Mapping ID description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>ID de mappage</osd:label>
+                                                    <osd:description>Description pour ID de mappage.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="gtin" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN</osd:label>
+                                                    <osd:description>GTIN description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code GTIN</osd:label>
+                                                    <osd:description>Description pour Code GTIN.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/GTINMaster</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="gpcBrickCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GPC Brick Code</osd:label>
+                                                    <osd:description>GPC Brick Code description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code brique GPC</osd:label>
+                                                    <osd:description>Description pour Code brique GPC.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="confidenceScore" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Confidence Score</osd:label>
+                                                    <osd:description>Confidence Score description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Score de confiance</osd:label>
+                                                    <osd:description>Description pour Score de confiance.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="primaryFlag" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Primary Flag</osd:label>
+                                                    <osd:description>Primary Flag description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Indicateur principal</osd:label>
+                                                    <osd:description>Description pour Indicateur principal.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="mappedBy" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Mapped By</osd:label>
+                                                    <osd:description>Mapped By description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Mappé par</osd:label>
+                                                    <osd:description>Description pour Mappé par.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="mappingMethod" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Mapping Method</osd:label>
+                                                    <osd:description>Mapping Method description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Méthode de mappage</osd:label>
+                                                    <osd:description>Description pour Méthode de mappage.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="MANUAL"/>
+                                                    <xs:enumeration value="AUTOMATED"/>
+                                                    <xs:enumeration value="AI_MODEL"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GTINDigitalAssets" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GTIN Digital Assets</osd:label>
+                                        <osd:description>GTIN Digital Assets description.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>GTIN Digital Assets</osd:label>
+                                        <osd:description>Description pour GTIN Digital Assets.</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/assetId </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="assetId" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Asset ID</osd:label>
+                                                    <osd:description>Asset ID description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>ID de l'actif</osd:label>
+                                                    <osd:description>Description pour ID de l'actif.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="gtin" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN</osd:label>
+                                                    <osd:description>GTIN description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code GTIN</osd:label>
+                                                    <osd:description>Description pour Code GTIN.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/GTINMaster</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="assetType" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Asset Type</osd:label>
+                                                    <osd:description>Asset Type description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Type d'actif</osd:label>
+                                                    <osd:description>Description pour Type d'actif.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/Reference/AssetType</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="assetUrl" type="xs:anyURI" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Asset URL</osd:label>
+                                                    <osd:description>Asset URL description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>URL de l'actif</osd:label>
+                                                    <osd:description>Description pour URL de l'actif.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="sourceUrl" type="xs:anyURI" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Source URL</osd:label>
+                                                    <osd:description>Source URL description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>URL source</osd:label>
+                                                    <osd:description>Description pour URL source.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="languageCode" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Language Code</osd:label>
+                                                    <osd:description>Language Code description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code langue</osd:label>
+                                                    <osd:description>Description pour Code langue.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="checksum" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Checksum</osd:label>
+                                                    <osd:description>Checksum description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Somme de contrôle</osd:label>
+                                                    <osd:description>Description pour Somme de contrôle.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GTINLifecycle" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GTIN Lifecycle</osd:label>
+                                        <osd:description>GTIN Lifecycle description.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>GTIN Lifecycle</osd:label>
+                                        <osd:description>Description pour GTIN Lifecycle.</osd:description>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/lifecycleId </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="lifecycleId" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Lifecycle ID</osd:label>
+                                                    <osd:description>Lifecycle ID description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>ID de cycle de vie</osd:label>
+                                                    <osd:description>Description pour ID de cycle de vie.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="gtin" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN</osd:label>
+                                                    <osd:description>GTIN description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code GTIN</osd:label>
+                                                    <osd:description>Description pour Code GTIN.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/GTINMaster</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="lifecycleStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Lifecycle Status</osd:label>
+                                                    <osd:description>Lifecycle Status description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Statut du cycle de vie</osd:label>
+                                                    <osd:description>Description pour Statut du cycle de vie.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/Reference/LifecycleStatus</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="statusDate" type="xs:date" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Status Date</osd:label>
+                                                    <osd:description>Status Date description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Date de statut</osd:label>
+                                                    <osd:description>Description pour Date de statut.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="approvalWorkflow" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Approval Workflow</osd:label>
+                                                    <osd:description>Approval Workflow description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Flux d'approbation</osd:label>
+                                                    <osd:description>Description pour Flux d'approbation.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="steward" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Steward</osd:label>
+                                                    <osd:description>Steward description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Administrateur</osd:label>
+                                                    <osd:description>Description pour Administrateur.</osd:description>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GTINClinicalAttributes" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GTIN Clinical Attributes</osd:label>
+                                        <osd:description>Clinical attributes and safety information.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Attributs cliniques GTIN</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/gtin </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="gtin" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code GTIN</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/GTINMaster</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="isImplantable" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Is Implantable</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Est implantable</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="isSingleUse" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Is Single Use</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Usage unique</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="prescriptionRequired" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Prescription Required</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Ordonnance requise</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="isSterile" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Is Sterile</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Est stérile</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="requiresSterilization" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Requires Sterilization</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Nécessite stérilisation</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="containsLatex" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Contains Latex</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Contient du latex</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="mriSafetyStatus" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>MRI Safety Status</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Statut de sécurité IRM</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GTINManufacturer" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GTIN Manufacturer</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Fabricant GTIN</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/gtin </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="gtin" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code GTIN</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/GTINMaster</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="companyName" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Company Name</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Nom de la société</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="dunsNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>DUNS Number</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Numéro DUNS</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="catalogNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Catalog Number</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Numéro de catalogue</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="contactEmail" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Contact Email</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>E-mail de contact</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="contactPhone" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Contact Phone</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Téléphone de contact</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GTINPackaging" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GTIN Packaging</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Emballage GTIN</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/gtin </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="gtin" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code GTIN</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/GTINMaster</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="packageType" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Package Type</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Type d'emballage</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="packageQuantity" type="xs:int" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Package Quantity</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Quantité par emballage</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="deviceCount" type="xs:int" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Device Count</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Nombre d'appareils</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GTINRegulatory" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GTIN Regulatory</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Réglementaire GTIN</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/gtin </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="gtin" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code GTIN</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/GTINMaster</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="premarketSubmissionNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Premarket Submission Number</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Numéro de soumission de pré-marché</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="isPremarketExempt" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Is Premarket Exempt</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Est exempté de pré-marché</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="requiresLotTracking" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Requires Lot Tracking</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Nécessite le suivi des lots</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="requiresSerialTracking" type="xs:boolean" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Requires Serial Tracking</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Nécessite le suivi des séries</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="GTINPhysicalSpecs" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>GTIN Physical Specs</osd:label>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Spécifications physiques GTIN</osd:label>
+                                    </xs:documentation>
+                                    <xs:appinfo>
+                                        <osd:table>
+                                            <primaryKeys>/gtin </primaryKeys>
+                                        </osd:table>
+                                    </xs:appinfo>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="gtin" type="xs:string" minOccurs="1" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Code GTIN</osd:label>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:otherFacets>
+                                                        <osd:tableRef>
+                                                            <tablePath>/root/GTINManagementDataModel/GTINMaster</tablePath>
+                                                        </osd:tableRef>
+                                                    </osd:otherFacets>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="dimensionType" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Dimension Type</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Type de dimension</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="dimensionValue" type="xs:decimal" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Dimension Value</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Valeur de la dimension</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="dimensionUnit" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Dimension Unit</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Unité de dimension</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="storageConditionType" type="xs:string" minOccurs="0" maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Storage Condition Type</osd:label>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Type de condition de stockage</osd:label>
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Reference" minOccurs="0" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation xml:lang="en-US">
+                                        <osd:label>Reference</osd:label>
+                                        <osd:description>Reference description.</osd:description>
+                                    </xs:documentation>
+                                    <xs:documentation xml:lang="fr-FR">
+                                        <osd:label>Reference</osd:label>
+                                        <osd:description>Description pour Reference.</osd:description>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="GTINType" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>GTIN Type</osd:label>
+                                                    <osd:description>GTIN Type description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>GTIN Type</osd:label>
+                                                    <osd:description>Description pour GTIN Type.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:table>
+                                                        <primaryKeys>/code </primaryKeys>
+                                                        <defaultLabel>${./code} - ${./name}</defaultLabel>
+                                                    </osd:table>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Code</osd:label>
+                                                                <osd:description>Code description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Code</osd:label>
+                                                                <osd:description>Description pour Code.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                    <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Name</osd:label>
+                                                                <osd:description>Name description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Nom</osd:label>
+                                                                <osd:description>Description pour Nom.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                    <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Description</osd:label>
+                                                                <osd:description>Description description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Description</osd:label>
+                                                                <osd:description>Description pour Description.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Currency" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Currency</osd:label>
+                                                    <osd:description>Currency description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Currency</osd:label>
+                                                    <osd:description>Description pour Currency.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:table>
+                                                        <primaryKeys>/code </primaryKeys>
+                                                        <defaultLabel>${./code} - ${./name}</defaultLabel>
+                                                    </osd:table>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Code</osd:label>
+                                                                <osd:description>Code description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Code</osd:label>
+                                                                <osd:description>Description pour Code.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                    <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Name</osd:label>
+                                                                <osd:description>Name description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Nom</osd:label>
+                                                                <osd:description>Description pour Nom.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                    <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Description</osd:label>
+                                                                <osd:description>Description description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Description</osd:label>
+                                                                <osd:description>Description pour Description.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="AssetType" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Asset Type</osd:label>
+                                                    <osd:description>Asset Type description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Asset Type</osd:label>
+                                                    <osd:description>Description pour Asset Type.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:table>
+                                                        <primaryKeys>/code </primaryKeys>
+                                                        <defaultLabel>${./code} - ${./name}</defaultLabel>
+                                                    </osd:table>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Code</osd:label>
+                                                                <osd:description>Code description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Code</osd:label>
+                                                                <osd:description>Description pour Code.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                    <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Name</osd:label>
+                                                                <osd:description>Name description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Nom</osd:label>
+                                                                <osd:description>Description pour Nom.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                    <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Description</osd:label>
+                                                                <osd:description>Description description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Description</osd:label>
+                                                                <osd:description>Description pour Description.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="LifecycleStatus" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation xml:lang="en-US">
+                                                    <osd:label>Lifecycle Status</osd:label>
+                                                    <osd:description>Lifecycle Status description.</osd:description>
+                                                </xs:documentation>
+                                                <xs:documentation xml:lang="fr-FR">
+                                                    <osd:label>Lifecycle Status</osd:label>
+                                                    <osd:description>Description pour Lifecycle Status.</osd:description>
+                                                </xs:documentation>
+                                                <xs:appinfo>
+                                                    <osd:table>
+                                                        <primaryKeys>/code </primaryKeys>
+                                                        <defaultLabel>${./code} - ${./name}</defaultLabel>
+                                                    </osd:table>
+                                                </xs:appinfo>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Code</osd:label>
+                                                                <osd:description>Code description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Code</osd:label>
+                                                                <osd:description>Description pour Code.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                    <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Name</osd:label>
+                                                                <osd:description>Name description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Nom</osd:label>
+                                                                <osd:description>Description pour Nom.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                    <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1">
+                                                        <xs:annotation>
+                                                            <xs:documentation xml:lang="en-US">
+                                                                <osd:label>Description</osd:label>
+                                                                <osd:description>Description description.</osd:description>
+                                                            </xs:documentation>
+                                                            <xs:documentation xml:lang="fr-FR">
+                                                                <osd:label>Description</osd:label>
+                                                                <osd:description>Description pour Description.</osd:description>
+                                                            </xs:documentation>
+                                                        </xs:annotation>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

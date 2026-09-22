@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<search>
+    <association>
+        <searchTemplate>@default</searchTemplate>
+        <field>/root/Language/Alpha2Code</field>
+        <searchStrategy>@Code</searchStrategy>
+    </association>
+    <association>
+        <searchTemplate>@default</searchTemplate>
+        <field>/root/Language/Name</field>
+        <searchStrategy>@Name</searchStrategy>
+    </association>
+    <association>
+        <searchTemplate>@default</searchTemplate>
+        <field>/root/Language/Locales</field>
+        <searchStrategy>@Code</searchStrategy>
+    </association>
+    <association>
+        <searchTemplate>@default</searchTemplate>
+        <field>/root/Locale/Code</field>
+        <searchStrategy>@Code</searchStrategy>
+    </association>
+    <association>
+        <searchTemplate>@default</searchTemplate>
+        <field>/root/Locale/Language</field>
+        <searchStrategy>@Code</searchStrategy>
+    </association>
+    <association>
+        <searchTemplate>@default</searchTemplate>
+        <field>/root/Locale/Country</field>
+        <searchStrategy>@Code</searchStrategy>
+    </association>
+</search>
