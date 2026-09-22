@@ -542,7 +542,7 @@ Name of Company corresponding to the labeler code segment of the ProductNDC.</os
                                     <xs:appinfo>
                                         <osd:association>
                                             <tableRefInverse>
-                                                <schemaLocation>urn:ebx:module:FastTrack:/WEB-INF/ebx/schemas/ICD10OrderFile.xsd</schemaLocation>
+                                                <schemaLocation>urn:ebx:module:ebx-reference-data:/WEB-INF/ebx/schemas/ICD10OrderFile.xsd</schemaLocation>
                                                 <dataSpace>ICD</dataSpace>
                                                 <dataSet>ICD10</dataSet>
                                                 <fieldToSource>/root/CMCodeTables/ICD10TableOfDrugs/LinkToNDC</fieldToSource>

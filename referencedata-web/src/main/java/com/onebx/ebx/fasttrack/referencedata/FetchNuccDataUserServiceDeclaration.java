@@ -12,7 +12,7 @@ import com.orchestranetworks.userservice.declaration.WebComponentDeclarationCont
 
 public class FetchNuccDataUserServiceDeclaration implements UserServiceDeclaration.OnTableView {
 
-    public static final ServiceKey SERVICE_KEY = ServiceKey.forName("EBX Reference Data Module@FetchNuccDataService");
+    public static final ServiceKey SERVICE_KEY = ServiceKey.forModuleServiceName(ModuleNames.REFERENCE_DATA, "FetchNuccDataService");
 
     @Override
     public ServiceKey getServiceKey() {

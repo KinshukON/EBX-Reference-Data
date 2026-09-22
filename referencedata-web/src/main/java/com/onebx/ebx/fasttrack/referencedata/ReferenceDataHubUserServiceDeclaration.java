@@ -11,7 +11,7 @@ import com.orchestranetworks.userservice.declaration.WebComponentDeclarationCont
 
 public class ReferenceDataHubUserServiceDeclaration implements UserServiceDeclaration.OnDataspace {
 
-    public static final ServiceKey SERVICE_KEY = ServiceKey.forName("EBX Reference Data Module@ReferenceDataHub");
+    public static final ServiceKey SERVICE_KEY = ServiceKey.forModuleServiceName(ModuleNames.REFERENCE_DATA, "ReferenceDataHub");
 
     @Override
     public ServiceKey getServiceKey() {
